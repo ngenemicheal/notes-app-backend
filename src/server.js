@@ -38,8 +38,12 @@ app.use((req, _, next) => {
 });
 
 app.use(cors({
-    origin: "https://notes2.hegesecure.com",
+    origin: [
+        "https://notes2.hegesecure.com",
+        "http://localhost:5173"
+    ],
 }));
+
 
 
 // if (process.env.NODE_ENV !== "production") {
